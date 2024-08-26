@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AADCCB0A-16FF-426E-A7A8-F3A680EBA78B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenCiv.Engine</RootNamespace>
+    <AssemblyName>OpenCiv.Engine</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C5, Version=2.4.5947.17248, Culture=neutral, PublicKeyToken=282361b99ded7e8e, processorArchitecture=MSIL">
+      <HintPath>..\packages\C5.2.4.5947.17249\lib\net45\C5.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuildingBuildViewModel.cs" />
+    <Compile Include="City.cs" />
+    <Compile Include="Civilization.cs" />
+    <Compile Include="CombatReport.cs" />
+    <Compile Include="Converters\BooleanToHeightConverter.cs" />
+    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\CityAllegianceToSourceConverter.cs" />
+    <Compile Include="Converters\CityHitPointToColorConverter.cs" />
+    <Compile Include="Converters\CityHitPointToWidthConverter.cs" />
+    <Compile Include="Converters\CityToVisibilityConverter.cs" />
+    <Compile Include="Converters\CityWallsToSourceConverter.cs" />
+    <Compile Include="Converters\EmptyStringToVisibilityConverter.cs" />
+    <Compile Include="Converters\GreaterThanZeroToVisibilityConverter.cs" />
+    <Compile Include="Converters\HitPointsToHeightConverter.cs" />
+    <Compile Include="Converters\HitPointToColorConverter.cs" />
+    <Compile Include="Converters\ImprovementToColorConverter.cs" />
+    <Compile Include="Converters\ImprovementToSourceConverter.cs" />
+    <Compile Include="Converters\ImprovementToStringConverter.cs" />
+    <Compile Include="Converters\ImprovementToVisibilityConverter.cs" />
+    <Compile Include="Converters\LeftConverter.cs" />
+    <Compile Include="Converters\LessThanZeroToColorConverter.cs" />
+    <Compile Include="Converters\MovesToColorConverter.cs" />
+    <Compile Include="Converters\NodeMessageTypeToColorConverter.cs" />
+    <Compile Include="Converters\PromotionToDescriptionConverter.cs" />
+    <Compile Include="Converters\RangedAttackToSourceConverter.cs" />
+    <Compile Include="Converters\ResourceToSourceConverter.cs" />
+    <Compile Include="Converters\ResourceToVisibilityConverter.cs" />
+    <Compile Include="Converters\RoadAltToSourceConverter.cs" />
+    <Compile Include="Converters\RoadToSourceConverter.cs" />
+    <Compile Include="Converters\SelectableConverter.cs" />
+    <Compile Include="Converters\ShortToHexStringConverter.cs" />
+    <Compile Include="Converters\StatusMessageTypeToColorConverter.cs" />
+    <Compile Include="Converters\TerrainToSourceConverter.cs" />
+    <Compile Include="Converters\TopConverter.cs" />
+    <Compile Include="Converters\TotalCombatPowerToTextConverter.cs" />
+    <Compile Include="Converters\UnitAllegianceToSourceConverter.cs" />
+    <Compile Include="Converters\UnitStatusToSourceConverter.cs" />
+    <Compile Include="Converters\UnitStatusToCharConverter.cs" />
+    <Compile Include="Converters\UnitStatusToTextConverter.cs" />
+    <Compile Include="Converters\UnitStatusToVisibilityConverter.cs" />
+    <Compile Include="Converters\UnitToSourceConverter.cs" />
+    <Compile Include="Converters\UnitToVisibilityConverter.cs" />
+    <Compile Include="Converters\AttackMethodToVisibilityConverter.cs" />
+    <Compile Include="Coords.cs" />
+    <Compile Include="Descriptions.cs" />
+    <Compile Include="Engine.cs" />
+    <Compile Include="Events\BuildingConstructedEventArgs.cs" />
+    <Compile Include="Events\ResearchCompletedEventArgs.cs" />
+    <Compile Include="Net\INetworkAdapter.cs" />
+    <Compile Include="Net\MockNetworkAdapter.cs" />
+    <Compile Include="NodeMessage.cs" />
+    <Compile Include="ObservableObject.cs" />
+    <Compile Include="Pathfinder.cs" />
+    <Compile Include="Policies.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="PromotionManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="PropertySupport.cs" />
+    <Compile Include="RelayCommand.cs" />
+    <Compile Include="Rules.cs" />
+    <Compile Include="StatusMessage.cs" />
+    <Compile Include="StatusMessageType.cs" />
+    <Compile Include="PopupMessageViewModel.cs" />
+    <Compile Include="Tech.cs" />
+    <Compile Include="TechTree.cs" />
+    <Compile Include="Tile.cs" />
+    <Compile Include="Types.cs" />
+    <Compile Include="Unit.cs" />
+    <Compile Include="UnitAttackViewModel.cs" />
+    <Compile Include="UnitBuildViewModel.cs" />
+    <Compile Include="Events\UnitConstructedEventArgs.cs" />
+    <Compile Include="UnitFactory.cs" />
+    <Compile Include="World.cs" />
+    <Compile Include="Net\XBeeNetworkAdapter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Zigbee\Zigbee.csproj">
+      <Project>{712410b3-03cb-4771-9afe-75ca1c65ec3e}</Project>
+      <Name>Zigbee</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Collections\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,80 @@
+﻿<Application x:Class="OpenCiv.Presentation.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:OpenCiv.Presentation"
+             xmlns:engine="clr-namespace:OpenCiv.Engine;assembly=OpenCiv.Engine"
+             xmlns:converters="clr-namespace:OpenCiv.Engine.Converters;assembly=OpenCiv.Engine"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <converters:StatusMessageTypeToColorConverter x:Key="StatusMessageTypeToColorConverter" />
+        <converters:LeftConverter x:Key="LeftConverter" />
+        <converters:TopConverter x:Key="TopConverter" />
+        <converters:TerrainToSourceConverter x:Key="TerrainToSourceConverter" />
+        <converters:UnitToSourceConverter x:Key="UnitToSourceConverter" />
+        <converters:UnitToVisibilityConverter x:Key="UnitToVisibilityConverter" />
+        <converters:UnitAllegianceToSourceConverter x:Key="UnitAllegianceToSourceConverter" />
+        <converters:CityToVisibilityConverter x:Key="CityToVisibilityConverter" />
+        <converters:CityAllegianceToSourceConverter x:Key="CityAllegianceToSourceConverter" />
+        <converters:TotalCombatPowerToTextConverter x:Key="TotalCombatPowerToTextConverter" />
+        <converters:HitPointToColorConverter x:Key="HitPointToColorConverter" />
+        <converters:HitPointToHeightConverter x:Key="HitPointToHeightConverter" />
+        <converters:SelectableConverter x:Key="SelectableConverter" />
+        <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+        <converters:UnitStatusToCharConverter x:Key="UnitStatusToCharConverter" />
+        <converters:UnitStatusToSourceConverter x:Key="UnitStatusToSourceConverter" />
+        <converters:UnitStatusToTextConverter x:Key="UnitStatusToTextConverter" />
+        <converters:ImprovementToSourceConverter x:Key="ImprovementToSourceConverter" />
+        <converters:UnitStatusToVisibilityConverter x:Key="UnitStatusToVisibilityConverter" />
+        <converters:RangedAttackToSourceConverter x:Key="RangedAttackToSourceConverter" />
+        <converters:CityWallsToSourceConverter x:Key="CityWallsToSourceConverter" />
+        <converters:CityHitPointToColorConverter x:Key="CityHitPointToColorConverter" />
+        <converters:CityHitPointToWidthConverter x:Key="CityHitPointToWidthConverter" />
+        <converters:ImprovementToVisibilityConverter x:Key="ImprovementToVisibilityConverter" />
+        <converters:ResourceToSourceConverter x:Key="ResourceToSourceConverter" />
+        <converters:ResourceToVisibilityConverter x:Key="ResourceToVisibilityConverter" />
+        <converters:RoadToSourceConverter x:Key="RoadToSourceConverter" />
+        <converters:RoadAltToSourceConverter x:Key="RoadAltToSourceConverter" />
+        <converters:MovesToColorConverter x:Key="MovesToColorConverter" />
+        <converters:AttackMethodToVisibilityConverter x:Key="AttackMethodToVisibilityConverter" />
+        <converters:EmptyStringToVisibilityConverter x:Key="EmptyStringToVisibilityConverter" />
+        <converters:UnitAllegianceToBrushConverter x:Key="UnitAllegianceToBrushConverter" />
+        <converters:GreaterThanZeroToVisibilityConverter x:Key="GreaterThanZeroToVisibilityConverter" />
+        <converters:PromotionToDescriptionConverter x:Key="PromotionToDescriptionConverter" />
+        <converters:LessThanZeroToColorConverter x:Key="LessThanZeroToColorConverter" />
+        <converters:BooleanToHeightConverter x:Key="BooleanToHeightConverter" />
+        <converters:ShortToHexStringConverter x:Key="ShortToHexStringConverter" />
+        <converters:NodeMessageTypeToColorConverter x:Key="NodeMessageTypeToColorConverter" />
+        <converters:ImprovementToStringConverter x:Key="ImprovementToStringConverter" />
+        <converters:ImprovementToColorConverter x:Key="ImprovementToColorConverter" />
+
+        <Style x:Key="actionButtonStyle" TargetType="Button">
+            <Setter Property="Margin" Value="3, 0, 3, 0" />
+            <Setter Property="Padding" Value="8, 3, 8, 3" />
+            <!--<Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        
+                        <Border Margin="2, 0, 2, 0" BorderBrush="Black" BorderThickness="2" MinWidth="40" MaxWidth="250" Height="25" CornerRadius="5">
+
+                            <Border.Background>
+                                <RadialGradientBrush GradientOrigin="0.5,0.5"
+                        Center="0.5,0.5" 
+                        RadiusX="0.8" RadiusY="0.8">
+                                    <RadialGradientBrush.GradientStops>
+                                        <GradientStop Color="White" Offset="0.0"/>
+                                        <GradientStop Color="LightBlue" Offset="0.5"/>
+                                        <GradientStop Color="DarkBlue" Offset="1.0"/>
+                                    </RadialGradientBrush.GradientStops>
+                                </RadialGradientBrush>
+                            </Border.Background>
+
+                            <TextBlock Margin="15, 0, 15, 0" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{TemplateBinding Content}" >
+                            </TextBlock>
+
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>-->
+        </Style>
+    </Application.Resources>
+</Application>
